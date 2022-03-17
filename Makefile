@@ -1,5 +1,14 @@
-.PHONY: clean
+LATEX_OPTS="-synctex=1 -interaction=nonstopmode"
 
+MAIN_NAME=presentation
+MAIN_TEX=$(MAIN_NAME).tex
+
+BIBLIOGRAPHY=ref.bib
+
+
+all: presentation clean
+
+.PHONY: clean
 clean:  
 	find . -type f \( -name "*.aux" \
 		       -o -name "*.log" \
@@ -18,5 +27,8 @@ clean:
 		       -delete
 
 .PHONY: presentation
-presentation:
-	pdflatex -synctex=1 -interaction=nonstopmode "presentation".tex
+presentation: $(MAIN_TEX) $(BIBLIOGRAPHY)
+	pdflatex $(LATEX_OPTS) $(MAIN_TEX)
+	pdflatex $(LATEX_OPTS) $(MAIN_TEX)
+
+	# pdflatex -synctex=1 -interaction=nonstopmode "presentation".tex
