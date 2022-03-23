@@ -9,13 +9,13 @@ Compile the sources to produce the pdf presentation running
 make presentation
 ```
 
-or 
+or simply
 
 ```bash
-make all
+make
 ```
 
-which cleans all the unwanted files produced by the compilation process.
+which additionally cleans all the unwanted files produced by the compilation process.
 
-## Acknowledgement
-Slides adapted from [this](https://github.com/matze/mtheme) wonderful template.
+## Acknowledgements
+Slides written starting from [this](https://github.com/matze/mtheme) wonderful template by Matthias Vogelgesang.
