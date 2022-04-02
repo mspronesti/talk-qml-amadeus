@@ -5,7 +5,10 @@
 
 %%
 \begin{frame}{Why going Quantum ?}
-	Until now, we’ve relied on supercomputers to solve most problems. These are very large classical computers, often with thousands of classical CPU and GPU cores. However, supercomputers aren’t very good at solving certain types of problems, which seem easy at first glance. 
+	Until now, we’ve relied on supercomputers to solve most problems. These are very large classical computers, often with thousands of classical CPU and GPU cores. However, supercomputers are not very good at solving certain types of problems, which seem easy at first glance. 
+	\begin{center}
+	    \includegraphics[width=.7\linewidth]{supercomputer}
+	\end{center}
 \end{frame}
 
 %%
@@ -40,27 +43,87 @@ Can you guess how many \alert{combinations}?
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Why is Quantum faster?}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{ quantumsup.png}
+    \caption{Quantum Supremacy}
+\end{figure}
+\begin{itemize}
+    \item Quantum computers can create vast multidimensional spaces in which to represent these very large problems. Classical supercomputers cannot do this.
+   
+\end{itemize}
+  
+\end{frame}
+
+\begin{frame}{Why is Quantum faster?}
+\begin{itemize}
+ \item Referring to the "10 fussy people at a dinner party" problem, with \alert{22 qubit} we can represent $2^{22} = 4194304$ states.
+    \item The computation may be carried out on all those numbers in a \alert{single parallel computation}. This built-in parallelism is the key to the power of quantum computers.
+\end{itemize}
+    
+\end{frame}
+
 %% 
-\begin{frame}[fragile]{Quantum Computers}
-	\begin{figure}[H]
-	  \centering
-	    \includegraphics[width=.8\linewidth]{quantum-computer}
-	    \caption{IBM's Quantum Computer}
-	\end{figure}
+\begin{frame}{Quantum Computer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ste due immagini messe così fanno schifo al cazzo
+%% devono essere stessa altezza e, sopratutto, quando si mettono due 
+%% immagini allineate non si trattano come fossero due figure distinte ...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.6\textwidth, height=.3\textheight]{quantum-computer}
+     \caption{IBM Quantum Computer}\label{Fig:Data1}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.6\textwidth, height=.3\textheight]{LEPbw}
+     \caption{Inside Look}\label{Fig:Data2}
+   \end{minipage}
+\end{figure}
+A quantum computer is a physical realisation of a quantum Turing machine supported by quantum mechanical processes which are modelled as physical qubits and abstracted as logical qubits.
+\end{frame}
+
+%%
+\begin{frame}{How is a Quantum computer programmed?}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\linewidth]{ Hto8a.png}
+    \caption{Quantum Computer Architecture}
+\end{figure}
+There is an \alert{interface} between quantum mechanical processes and classical computer processes. Through this interface, input data from a a classical computing device can be fed into a quantum circuit.
+\end{frame}
+
+%%
+\begin{frame}{How is a Quantum computer programmed?}
+    \begin{itemize}
+        \item \alert{Quantum Circuits} are constructed from Quantum Registers.
+        \item \alert{Quantum Register} is a type of circuit construction from logical qubits. 
+        \item \alert{Logical Qubits} can create different permutations and combinations of physical qubit manifestations.
+    \end{itemize}
 \end{frame}
 
 %%
 \begin{frame}[fragile]{What are Quantum Computers good at ?}
-	cose da dire: 
-	\begin{itemize}
-		\item Linear Algebra
-		\item Optimization
-		\item Sampling
-		\item Research Algorithms
-	\end{itemize}
+    \begin{figure}[!htb]
+        \subfloat[Linear Algebra]{\includegraphics[width=0.3\linewidth]{linalg}} \quad
+		 \subfloat[Sampling]{\includegraphics[width=0.3\linewidth]{sampling}} \quad
+		 \subfloat[Optimization]{\includegraphics[width=0.33\linewidth, height=0.38\textheight]{optimiz}} 
+    \end{figure}
+    %
+	%cose da dire: 
+	%\begin{itemize}
+	%	\item Linear Algebra
+	%	\item Optimization
+	%	\item Sampling
+	%	\item Research Algorithms
+	%\end{itemize}
 \end{frame}
 
-%% 
+
+%%
 \begin{frame}[fragile]{A Growing Interest in the field}
 	cose da dire: 
 	\begin{itemize}

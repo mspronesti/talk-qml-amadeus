@@ -2,9 +2,87 @@
 \graphicspath{{assets/qlearnkit/}}
 
 \section{Qlearnkit}
+\begin{frame}{What is Qlearnkit ?}
+\begin{itemize}
+    \item a Python library for \alert{Quantum Machine Learning}, built on top of \alert{Qiskit} and (optionally) \alert{Pennylane}
+    \item developed at EURECOM for \alert{MALIS} and \alert{QUANTIS}
+    \item implements some famous Machine Learning and Deep Learning algorithms and models
+    \item open-source and available on Github
+    \item installable from PYPI
+    %% METTERE I LOGHI ECC.
+\end{itemize}
+\end{frame}
 
-%% ROBA
 
+%%%%%%%%%%%%% QSVM
 \subsection{Quantum Support Vector Machines}
 
+
+\begin{frame}{QSVM - Basic idea}
+    Many implementations are possible. The general structure is common:
+    \begin{enumerate}
+        \item Encode samples in quantum format
+        \item Compute a kernel matrix of distances using quantum circuits
+        \item Use matrix to solve SVM problem and obtain a solution
+    \end{enumerate}
+    Steps 2 and 3 can benefit from a quantum speedup. A fully quantum solution has $O(\log mn)$ time complexity 
+    
+    ($n$: number of samples, $m$: number of features)
+\end{frame}
+
+\begin{frame}{An implementation}
+    \begin{enumerate}
+        \item Encode samples in quantum format
+        
+        $$ \mathcal{U}_{\Phi(\mathbf{x})}=\prod_d U_{\Phi(\mathbf{x})}H^{\otimes n},\ U_{\Phi(\mathbf{x})}=\exp\left(i\sum_{S\subseteq[n]}\phi_S(\mathbf{x})\prod_{k\in S} P_i\right), $$
+        
+        Equivalent to mapping in a higher dimensional space.
+        \vspace{0.5mm}
+        \item Compute a kernel matrix of distances using quantum circuits
+        $$K_{ij} = \langle f(\vec{x}_i), f(\vec{x}_j) \rangle = \left| \langle \phi^\dagger(\vec{x}_j)| \phi(\vec{x}_i) \rangle \right|^{2} = 
+        |\langle 0^n |\mathcal{U}_{\Phi(\mathbf{x_i})}^{\dagger}\mathcal{U}_{\Phi(\mathbf{x_j})}| 0^n \rangle |^2
+        $$
+        %Sources: https://arxiv.org/pdf/1804.11326.pdf, https://github.com/Qiskit/qiskit-machine-learning/blob/stable/0.3/docs/tutorials/03_quantum_kernel.ipynb
+        Equivalent to computing a scalar product.
+    \end{enumerate}
+    
+    ($n$: number of samples, $m$: number of features)
+\end{frame}
+
+\begin{frame}{An implementation}
+    \begin{enumerate}
+      \setcounter{enumi}{2}
+        \item Use this matrix to solve SVM problem and obtain a solution
+        LS-SVM Formulation:
+            \begin{align*}
+            \begin{bmatrix}
+            0 & 1^T_N \\
+            1_N & K+\gamma^{-1}I_N 
+            \end{bmatrix}
+            \begin{bmatrix}
+            \beta \\
+            \alpha
+            \end{bmatrix} = 
+            \begin{bmatrix}
+            0 \\
+            Y
+            \end{bmatrix}
+            \end{align*}
+        $\alpha$: SVM parameters
+        
+        $\beta$: bias term
+        
+        Predict as
+        \begin{align*}
+        f(\cdot) = K( \cdot,X) \cdot \alpha + \beta
+        \end{align*}
+        Note: $K( \cdot,X)$ is done again on a quantum computer
+    \end{enumerate}
+    
+    ($n$: number of samples, $m$: number of features)
+\end{frame}
+
 \subsection{Quantum Long-Short Term Memory}
+\begin{frame}{Architecture}
+    Show architecture here!
+\end{frame}
