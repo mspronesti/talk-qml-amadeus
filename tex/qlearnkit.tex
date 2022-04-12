@@ -2,15 +2,31 @@
 \graphicspath{{assets/qlearnkit/}}
 
 \section{Qlearnkit}
+
+
 \begin{frame}{What is Qlearnkit ?}
-\begin{itemize}
-    \item a Python library for \alert{Quantum Machine Learning}, built on top of \alert{Qiskit} and (optionally) \alert{Pennylane}
-    \item developed at EURECOM for \alert{MALIS} and \alert{QUANTIS}
-    \item implements some famous Machine Learning and Deep Learning algorithms and models
-    \item open-source and available on Github
-    \item installable from Pypi
-    %% METTERE I LOGHI ECC.
-\end{itemize}
+    \begin{itemize}
+        \item a Python library for \alert{Quantum Machine Learning}, built on top of \alert{Qiskit} and (optionally) \alert{Pennylane}
+        \item developed at EURECOM for \alert{MALIS} and \alert{QUANTIS}
+        \item implements some famous Machine Learning and Deep Learning algorithms and models
+        \item open-source and available on Github
+        \item installable from PyPi or provided in a Docker container 
+        \vspace{0.5cm}
+        
+        \begin{figure}
+            \centering
+            \begin{minipage}[c]{0.3\textwidth}
+    			\includegraphics[width=0.4\linewidth]{gh_logo}
+    		\end{minipage}
+    		\begin{minipage}[c]{0.3\textwidth}
+    			\includegraphics[width=0.4\linewidth]{pypilogo}
+    		\end{minipage}
+            \begin{minipage}[c]{0.3\textwidth}
+			    \includegraphics[width=0.6\linewidth]{docker-logo}
+    		\end{minipage}
+        \end{figure}
+		
+    \end{itemize}
 \end{frame}
 
 
@@ -27,7 +43,7 @@
     \end{enumerate}
     Steps 2 and 3 can benefit from a quantum speedup. A fully quantum solution has $O(\log mn)$ time complexity 
     
-    ($n$: number of samples, $m$: number of features)
+    ($n$: number of features, $m$: number of samples)
 \end{frame}
 
 \begin{frame}{An implementation}
@@ -46,7 +62,7 @@
         Equivalent to computing a scalar product.
     \end{enumerate}
     
-    ($n$: number of samples, $m$: number of features)
+    ($n$: number of features, $m$: number of samples)
 \end{frame}
 
 \begin{frame}{An implementation}
@@ -79,7 +95,7 @@
         Note: $K( \cdot,X)$ is done again on a quantum computer
     \end{enumerate}
     
-    ($n$: number of samples, $m$: number of features)
+    ($n$: number of features, $m$: number of samples)
 \end{frame}
 
 
@@ -90,15 +106,15 @@
 	The Quantum Cell is a Variational Quantum Circuit (VQC):
 	 
 	 \begin{itemize}
-	 	\item Encoding Layer for data preparation U($X$) 
-	 	\item Variational Layer V($\theta$), with $\theta$ the \alert{learnable} parameters
+	 	\item Encoding Layer for data preparation $\mathcal{U}(X)$ 
+	 	\item Variational Layer $\mathcal{V}(\theta)$, with $\theta$ the \alert{learnable} parameters
 	 	\item Measurement Layer, to retrieve a \alert{classical} bit string
 	 \end{itemize}
 
 	\begin{figure}[h]
 		\centering
 		\begin{quantikz} 
-			& \gate[wires=3][2cm]{U(\textbf{X})} & \gate[wires=3][2cm]{V(\boldsymbol\theta)} & \meter{} \\
+			& \gate[wires=3][2cm]{\mathcal{U}(\textbf{X})} & \gate[wires=3][2cm]{\mathcal{V}(\boldsymbol\theta)} & \meter{} \\
 			& \qw & \qw  & \meter{} \\
 			& \qw & \qw  & \meter{} 
 		\end{quantikz}

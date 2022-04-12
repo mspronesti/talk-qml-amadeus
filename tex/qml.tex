@@ -28,15 +28,14 @@
 	 	\item \alert{Variational Quantum Circuits}
 	 	\item Quantum Neural Networks
 	 \end{itemize}
- \footnotesize
+	\small
+	\centering
  	\begin{quantikz}
- 	& \gate[wires=4][1.5cm]{U_1(\theta_1, \phi_1)}& \gate{S(r_1)} & \gate[wires=4][1.5cm]{U_2(\theta_2, \phi_2)} & \gate{D(\alpha_1)} & \gate{\Phi(\lambda_1)}  & \qw\\
- 	& \qw 										& \gate{S(r_2)} &  \qw & \gate{D(\alpha_2)} & \gate{\Phi(\lambda_2)} & \qw \\ %% to leave space for the 3 dots
- 	& \vdots & \vdots \ \ & \vdots & \vdots & \vdots  \\ 
- 	& \qw 										& \gate{S(r_N)} & \qw  & \gate{D(\alpha_N)} & \gate{\Phi(\lambda_N)} & \qw
- \end{quantikz}
+    	& \gate[wires=3][2cm]{\mathcal{U}_1(\theta_1, \phi_1)}& \gate{S(r_1)} & \gate[wires=3][2cm]{\mathcal{U}_2(\theta_2, \phi_2)} & \gate{D(\alpha_1)} & \gate{\Phi(\lambda_1)}  & \qw\\
+    	&  & \vdots \ \ \ & \vdots & \vdots & \vdots  \\ 
+    	& \qw 										& \gate{\mathcal{S}(r_N)} & \qw  & \gate{\mathcal{D}(\alpha_N)} & \gate{\Phi(\lambda_N)} & \qw
+    \end{quantikz}
 \end{frame}
-
 
 %%
 \begin{frame}{A lesson from Deep Learning's success}
@@ -48,37 +47,31 @@
 		\item hardware advancements(GPUs, recently TPUs)
 		\item Workhorse algorithms (backprop, stochastic GD, ...)
 		\item specialized, user-friendly, maintained, high-perfomance software (PyTorch, Tensorflow, Keras)
-		\includegraphics[width=.8\linewidth]{backprop}
+		\includegraphics[width=\linewidth]{lenet-5}
 	\end{itemize}	
 \end{frame}
 
 %%
-\begin{frame}{What can we laverage?}
+\begin{frame}{What can we leverage?}
 	\begin{itemize}
 		\item hardware advancements(GPUs, TPUs + \alert{QPUs})
 		\item 
 		workhorse algorithms\\ (\alert{quantum-aware} backpropagation, stochastic GD, ...)
-		\includegraphics[width=.6\linewidth]{qbackprop}
-%		\adjustbox{valign=t}{
-%			\begin{minipage}[t]{0.3\linewidth}
-%				workhorse algorithms (\alert{quantum-aware} backpropagation, stochastic GD, ...)
-%			\end{minipage}
-%		}
-%		\hfill
-%		\adjustbox{valign=t}{
-%			\begin{minipage}[t]{0.5\linewidth}
-%				\includegraphics[width=\linewidth]{qbackprop}
-%			\end{minipage}
-%		}
-%		
-		
-		
+		\begin{center}
+		  \includegraphics[width=.6\linewidth]{qbackprop}
+		\end{center}	
 		
 		\item specialized, user-friendly, high-performance software (Pennylane, Qiskit, Tensorflow Quantum, ...)
 		
 		\item 
-		\alert{hybrid} computation\\
-		\includegraphics[width=.7\linewidth]{hybrid}
+%		\alert{hybrid} computation
+%		\includegraphics[width=.7\linewidth]{hybrid}
+		\begin{minipage}[c]{0.3\textwidth}
+			\alert{hybrid} computation
+		\end{minipage}
+		\begin{minipage}[c]{0.6\textwidth}
+			\includegraphics[width=\linewidth]{hybrid}
+		\end{minipage}
 		
 	\end{itemize}
 \end{frame}
