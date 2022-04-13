@@ -35,7 +35,19 @@
 	Giulio Corallo
 }
 
+
 \institute{Amadeus Knowledge Sharing Session}
+
+%% header color
+\definecolor{bluegreen}{RGB}{3, 166, 155}
+\definecolor{pitchblack}{RGB}{0, 0, 0}
+\definecolor{lightbeige}{RGB}{255, 251, 241}
+\definecolor{mediumgray}{RGB}{183, 183, 183}
+\definecolor{michiard}{RGB}{0, 48, 74}
+
+
+% both frametitle and standout inherit from palette primary (see beamer codebase)
+\setbeamercolor{palette primary}{fg=white, bg=bluegreen}
 
 
 \begin{document}
@@ -59,6 +71,10 @@
 	\input{tex/qml.tex}
 	\input{tex/qlearnkit.tex}
 	
+	%% Demo Slide
+	\begin{frame}[standout]
+		Demo Time!
+	\end{frame}
 	
     %% VA COMMENTATO ANCHE QUESTO !!!
 	\begin{frame}{References}
@@ -69,10 +85,9 @@
 	
 	
 	%% Questions Slide
-	
 	\begin{frame}[standout]
 		Thanks for your attention!\\
-		 Any Question? ~\alert{\faSmileO}~
+		Questions ? ~\alert{\faSmileO}~
 	\end{frame}
 	
 	
