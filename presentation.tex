@@ -40,14 +40,11 @@
 
 %% header color
 \definecolor{bluegreen}{RGB}{3, 166, 155}
-\definecolor{pitchblack}{RGB}{0, 0, 0}
-\definecolor{lightbeige}{RGB}{255, 251, 241}
-\definecolor{mediumgray}{RGB}{183, 183, 183}
 \definecolor{michiard}{RGB}{0, 48, 74}
 
 
 % both frametitle and standout inherit from palette primary (see beamer codebase)
-\setbeamercolor{palette primary}{fg=white, bg=bluegreen}
+\setbeamercolor{palette primary}{fg=white, bg=michiard}
 
 
 \begin{document}
@@ -58,8 +55,8 @@
 	\input{tex/whoarewe.tex}
 	
 	% outline
-	\begin{frame}{Outline}
-		\setbeamertemplate{section in toc}[sections numbered]
+	\begin{frame}[plain]{Outline}
+		\setbeamertemplate{sections/subsections in toc}[square]
 		\tableofcontents
 		%[hideallsubsections]
 		% uncomment the above line to hide subsections

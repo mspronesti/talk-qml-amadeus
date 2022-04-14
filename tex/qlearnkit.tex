@@ -118,7 +118,7 @@
 			& \qw & \qw  & \meter{} \\
 			& \qw & \qw  & \meter{} 
 		\end{quantikz}
-	    \caption{A generic Variational Quantum Circuit with 3 inputs}
+	    %\caption{A generic Variational Quantum Circuit with 3 inputs}
 	\end{figure}
 \end{frame}
 
@@ -148,7 +148,7 @@
 \begin{frame}{Architecture}
 	%% Architecture without Boxes %%
 	 \only<+>{
-    \begin{figure}[h]
+    \begin{figure}[!htb]
     	\centering
     	\begin{quantikz}
     		\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \ctrl{1} & \qw      & \targ{}  & \gate{R(\alpha_1, \beta_1, \gamma_2)} & \meter{}\\
@@ -163,7 +163,7 @@
 	
 	%% Architecture with 1 Box %%
 		\only<+>{
-		\begin{figure}[h]
+		\begin{figure}[!htb]
 			\begin{quantikz}
 				\lstick{$\ket{0}$} & \gate{H}
 				
@@ -182,13 +182,13 @@
 				\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \targ{}  & \ctrl{1} & \qw & \gate{R(\alpha_2, \beta_2, \gamma_3)} & \meter{} \\
 				\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \qw      & \targ{}  & \ctrl{-2} & \gate{R(\alpha_3, \beta_3, \gamma_3)} & \meter{}
 			\end{quantikz}
-			\caption{single-layer Quantum LSTM cell}
+			%\caption{single-layer Quantum LSTM cell}
 		\end{figure}
 	}
 	
 	%% Architecture with 2 Boxes %%
 		\only<+>{
-		\begin{figure}[h]
+		\begin{figure}[!htb]
 			\begin{quantikz}
 				\lstick{$\ket{0}$} & \gate{H}
 				
@@ -215,7 +215,7 @@
 				\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \targ{}  & \ctrl{1} & \qw & \gate{R(\alpha_2, \beta_2, \gamma_3)} & \meter{} \\
 				\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \qw      & \targ{}  & \ctrl{-2} & \gate{R(\alpha_3, \beta_3, \gamma_3)} & \meter{}
 			\end{quantikz}
-			\caption{single-layer Quantum LSTM cell}
+			%\caption{single-layer Quantum LSTM cell}
 		\end{figure}
 	}
 	
@@ -223,7 +223,7 @@
 	
 	%% Architecture with 3 Boxes %%
 	\only<+>{
-		\begin{figure}[h]
+		\begin{figure}[!htb]
 		\begin{quantikz}
 			\lstick{$\ket{0}$} & \gate{H}
 			
@@ -257,7 +257,7 @@
 			\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \targ{}  & \ctrl{1} & \qw & \gate{R(\alpha_2, \beta_2, \gamma_3)} & \meter{} \\
 			\lstick{$\ket{0}$} & \gate{H} & \gate{R_y} & \gate{R_z} & \qw      & \targ{}  & \ctrl{-2} & \gate{R(\alpha_3, \beta_3, \gamma_3)} & \meter{}
 		\end{quantikz}
-		\caption{single-layer Quantum LSTM cell}
+		%\caption{single-layer Quantum LSTM cell}
 	\end{figure}
 	}
 \end{frame}
