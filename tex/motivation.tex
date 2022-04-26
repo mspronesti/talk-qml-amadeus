@@ -4,7 +4,7 @@
 \section[Motivation]{Motivation}
 
 %%
-\begin{frame}{Why going Quantum ?}
+\begin{frame}{Why Quantum?}
 	Until now, we’ve relied on supercomputers to solve most problems. These are very large classical computers, often with thousands of classical CPU and GPU cores. However, supercomputers are not very good at solving certain types of problems, which seem easy at first glance. 
 	
 	\begin{center}
@@ -13,7 +13,7 @@
 \end{frame}
 
 %%
-\begin{frame}{Why going Quantum ? A simple example}
+\begin{frame}{Why Quantum? A simple example}
 	
 Imagine you want to seat 10 fussy people at a dinner party, where there is only one optimal seating plan out of all the different possible combinations. How many different combinations would you have to explore to find the optimal?
 
@@ -22,7 +22,7 @@ Can you guess how many \alert{combinations}\footnote{Example from IBM's website 
 
 
 %% animation
-\begin{frame}[<+- | only+>]{Why going Quantum ? A simple example}
+\begin{frame}[<+- | only+>]{Why Quantum? A simple example}
 	\metroset{block=fill}
 	
 	
@@ -45,7 +45,7 @@ Can you guess how many \alert{combinations}\footnote{Example from IBM's website 
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Why going Quantum ?}
+\begin{frame}{Why Quantum?}
 \begin{itemize}
  \item Quantum computers represent problems in vast multidimensional spaces. Classical computers are more limited.
  \item Referring to the "10 fussy people at a dinner party" problem, with \alert{22 qubit} we can represent $2^{22} = 4194304$ states.
@@ -59,23 +59,15 @@ Can you guess how many \alert{combinations}\footnote{Example from IBM's website 
 \begin{frame}{How is a Quantum computer programmed?}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.4\linewidth]{ Hto8a.png}
+    \includegraphics[width=.4\linewidth]{Hto8a}
     %\caption{Quantum Computer Architecture}
 \end{figure}
-There is an \alert{interface} between quantum mechanical processes and classical computer processes. Through this interface, input data from a a classical computing device can be fed into a quantum circuit.
+There is an \alert{interface} between quantum mechanical processes and classical computer processes. Through this interface, input data from a classical computing device can be fed to quantum circuits.
 \end{frame}
 
-%%
-\begin{frame}{How is a Quantum computer programmed?}
-    \begin{itemize}
-        \item \alert{Quantum Circuits} are constructed from Quantum Registers.
-        \item \alert{Quantum Register} is a type of circuit construction from logical qubits. 
-        \item \alert{Logical Qubits} can create different permutations and combinations of physical qubit manifestations.
-    \end{itemize}
-\end{frame}
 
 %%
-\begin{frame}[fragile]{What are Quantum Computers good at ?}
+\begin{frame}[fragile]{What are Quantum Computers good at?}
     \begin{figure}[h!]
          \captionsetup[subfloat]{labelformat=empty}
          \subfloat[Linear Algebra]{\includegraphics[width=0.3\linewidth]{linalg}} \quad

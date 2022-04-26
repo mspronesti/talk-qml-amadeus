@@ -4,7 +4,7 @@
 \section[Quantum Machine Learning]{Quantum Machine Learning}
 
 %%
-\begin{frame}{How can ML benefit from Quantum Computers ? }
+\begin{frame}{How can ML benefit from Quantum Computers? }
 	\begin{itemize}
 		\item AI/ML already uses (massively) special-purpose processors: GPUs, TPUs, ASICs
 		\item  Quantum computers (\alert{QPUs}) could be used as special-purpose AI
@@ -31,7 +31,7 @@
 	\small
 	\centering
  	\begin{quantikz}
-    	& \gate[wires=3][2cm]{\mathcal{U}_1(\theta_1, \phi_1)}& \gate{S(r_1)} & \gate[wires=3][2cm]{\mathcal{U}_2(\theta_2, \phi_2)} & \gate{D(\alpha_1)} & \gate{\Phi(\lambda_1)}  & \qw\\
+    	& \gate[wires=3][2cm]{\mathcal{U}_1(\theta_1, \phi_1)}& \gate{\mathcal{S}(r_1)} & \gate[wires=3][2cm]{\mathcal{U}_2(\theta_2, \phi_2)} & \gate{\mathcal{D}(\alpha_1)} & \gate{\Phi(\lambda_1)}  & \qw\\
     	&  & \vdots \ \ \ & \vdots & \vdots & \vdots  \\ 
     	& \qw 										& \gate{\mathcal{S}(r_N)} & \qw  & \gate{\mathcal{D}(\alpha_N)} & \gate{\Phi(\lambda_N)} & \qw
     \end{quantikz}
@@ -40,7 +40,7 @@
 %%
 \begin{frame}{A lesson from Deep Learning's success}
 	\begin{Large}
-		Why is Deep Learning \alert{Successful} ? 
+		Why is Deep Learning \alert{Successful}? 
 	\end{Large}
 
 	\begin{itemize}

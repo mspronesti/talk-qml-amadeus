@@ -4,7 +4,7 @@
 \section{Qlearnkit}
 
 
-\begin{frame}{What is Qlearnkit ?}
+\begin{frame}{What is Qlearnkit?}
     \begin{itemize}
         \item a Python library for \alert{Quantum Machine Learning}, built on top of \alert{Qiskit} and (optionally) \alert{Pennylane}
         \item developed at EURECOM for \alert{MALIS} and \alert{QUANTIS}
@@ -138,7 +138,7 @@
 			\tilde{\textbf{C}}_t &= \text{tanh} (\text{VQC}_3 (\textbf{v}_t)) \\
 			\textbf{c}_t &= \textbf{f}_t   \textbf{c}_{t-1} + \textbf{i}_t  \tilde{\textbf{C}}_t \\
 			\textbf{o}_t &= \sigma (\text{VQC}_4 (\textbf{v}_t )) \\
-			\textbf{h}_t &= \text{VQC}_5 (\textbf{o}_t  * \text{tanh}(\textbf{c}_t ))
+			\textbf{h}_t &= \text{VQC}_5 (\textbf{o}_t  \cdot \text{tanh}(\textbf{c}_t ))
 		\end{align*}
 	\end{minipage}
 
@@ -276,8 +276,8 @@
 	\item<2-> 
 		apply Hadamard to the initial state $|0\rangle \otimes ... \otimes |0 \rangle$ to transform it into an \alert{unbiased} state
 		\begin{align*}
-			(H | 0 \rangle)^{\otimes N} &= \frac{1}{\sqrt{2^N}} (|0\rangle \otimes ... \otimes |0\rangle + |1\rangle \otimes ... \otimes |1\rangle) 
-				=  \frac{1}{\sqrt{2^N}} \sum^{2^N - 1}_0 |i\rangle
+			(H | 0 \rangle)^{\otimes N} &= \frac{1}{\sqrt{2^N}} (|0\rangle \otimes ... \otimes |0\rangle + ... + |1\rangle \otimes ... \otimes |1\rangle) 
+				=  \frac{1}{\sqrt{2^N}} \sum^{2^N - 1}_{i = 0} |i\rangle
 		\end{align*}
 	  \item<3->
 		generate 2N \alert{rotation} angles from the N-dimensional input vector by taking
